@@ -100,3 +100,18 @@ function printToFiveWithClosure() {
 }
 
 printToFiveWithClosure();
+
+// 
+function closureTest()
+{
+  for(var i=1; i<=5; i++) {
+	  setTimeout(() => {
+  	  console.log(i);
+          i = i + 1;
+       },  i*1000);
+}
+  console.log("outside: ", i)
+  if( i < 10 ) i = 10;
+}
+
+closureTest();
